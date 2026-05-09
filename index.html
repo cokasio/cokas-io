@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick Cokas — Fractional CTO | AI Infrastructure</title>
+  <meta name="description" content="I build AI infrastructure that actually works. Fractional CTO for companies integrating AI into operations, data systems, and decision-making.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink: #0f0f0e;
+      --cream: #f9f7f2;
+      --warm: #5a564d;
+      --accent: #c8372d;
+      --border: rgba(15, 15, 14, 0.08);
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 20px;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cream);
+      background: var(--ink);
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #2a2a2e; }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+    }
+    .hero h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .hero p {
+      font-size: 17px;
+      color: var(--warm);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* Section */
+    section {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--warm);
+      opacity: 0.6;
+      margin-bottom: 20px;
+    }
+    section h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 28px;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    section p {
+      font-size: 15px;
+      color: var(--warm);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--warm);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Proof */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .proof-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .proof-number {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 32px;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .proof-label {
+      font-size: 12px;
+      color: var(--warm);
+      line-height: 1.4;
+    }
+
+    /* Yardi */
+    .yardi-section {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px;
+      margin-top: 24px;
+    }
+    .yardi-section h3 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .yardi-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .yardi-section li {
+      font-size: 14px;
+      color: var(--warm);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.6;
+    }
+    .yardi-section li:last-child { border-bottom: none; }
+    .yardi-section li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding: 64px 0;
+    }
+    .cta-section h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .cta-section p {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .cta-btn {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cream);
+      background: var(--accent);
+      padding: 16px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #b02f26; }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 12px;
+      color: var(--warm);
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .proof-grid { grid-template-columns: 1fr; }
+      .hero { padding: 48px 0 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">cokas.io</a>
+      <a href="mailto:nick@cokas.io" class="nav-cta">Get in Touch</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="hero">
+      <h1>I build AI infrastructure<br>that <em>actually works.</em></h1>
+      <p>Fractional CTO for companies integrating AI into operations, data systems, and decision-making. I don't sell slides — I ship working systems.</p>
+    </div>
+
+    <!-- What I Do -->
+    <section>
+      <div class="section-label">What I Do</div>
+      <h2>Your AI strategy, built and deployed.</h2>
+      <p>Most companies know they need AI. Few know how to build it without burning six figures on consultants who leave you with a deck. I build the thing — then hand you the keys.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>AI Infrastructure</h3>
+          <p>Production-grade reasoning engines, MCP integrations, retrieval pipelines, and decision-support systems. Not prototypes — deployed, monitored, and working.</p>
+        </div>
+        <div class="card">
+          <h3>Data Systems & Integration</h3>
+          <p>Connect your existing systems — Yardi, Salesforce, ERP, whatever you run — to AI that actually understands your data. No rip-and-replace.</p>
+        </div>
+        <div class="card">
+          <h3>Technical Leadership</h3>
+          <p>Architecture decisions, vendor evaluation, team hiring, and build-vs-buy strategy. The CTO work without the full-time cost.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof -->
+    <section>
+      <div class="section-label">The Work</div>
+      <h2>Built solo. Runs in production.</h2>
+      <p>I built a cross-domain reasoning engine that processes questions across 32 fields, scores claims against evidence, and delivers grounded answers — not hallucinations.</p>
+
+      <div class="proof-grid">
+        <div class="proof-item">
+          <div class="proof-number">11.2M</div>
+          <div class="proof-label">patterns indexed across 32 domains</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">9</div>
+          <div class="proof-label">stage reasoning chain, deployed</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">1</div>
+          <div class="proof-label">engineer. The whole stack.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Yardi -->
+    <section>
+      <div class="section-label">Industry Expertise</div>
+      <h2>Deep in property tech.</h2>
+      <p>Years of hands-on experience with Yardi systems and real estate technology. I understand the data, the workflows, and where AI actually adds value versus where it's a distraction.</p>
+
+      <div class="yardi-section">
+        <h3>What I bring to property tech</h3>
+        <ul>
+          <li>Consulting for organizations using Yardi software — reporting, data, workflows</li>
+          <li>AI-powered deal analysis across tax, insurance, zoning, and market data</li>
+          <li>Portfolio analytics that connect operational data to investment decisions</li>
+          <li>Multi-entity reporting and compliance automation</li>
+          <li>Custom reporting using Yardi tools including YSR and Data Connect</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section>
+      <div class="section-label">How It Works</div>
+      <h2>Simple engagement. Real output.</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Week 1 — Audit</h3>
+          <p>I learn your stack, your pain points, and where AI actually fits. You get a written plan with specific deliverables and timelines.</p>
+        </div>
+        <div class="card">
+          <h3>Weeks 2-4 — Build</h3>
+          <p>I build the first working system. Not a demo — something your team uses. You see progress every week.</p>
+        </div>
+        <div class="card">
+          <h3>Ongoing — Run</h3>
+          <p>Monthly retainer for continued development, monitoring, and technical leadership. Scale up or down as needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Let's talk about what you need built.</h2>
+      <p>30-minute call. No pitch. I'll tell you what I'd do and whether it's worth doing.</p>
+      <a href="mailto:nick@cokas.io" class="cta-btn">nick@cokas.io</a>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      Nick Cokas &middot; cokas.io &middot; St. Augustine, FL
+    </div>
+  </footer>
+
+</body>
+</html>
